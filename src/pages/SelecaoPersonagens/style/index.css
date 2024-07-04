@@ -1,0 +1,21 @@
+.header-usuario{
+    display: flex;
+    justify-content: center;
+}
+
+.header-title, .section-personagens{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.section-personagens{
+    position: relative;
+    top: 100px;    
+}
+
+.personagem{
+    height: 650px;
+    width: 320px;
+    cursor: pointer;
+}
+

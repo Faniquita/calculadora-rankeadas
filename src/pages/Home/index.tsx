@@ -24,13 +24,13 @@ const Home = () => {
         }else{
             showToast({typeToast:"success", messageToast:"Seja bem vindo(a) " + usuario})            
             setTimeout(() => {
-                selecaoPersonagem()
+                selecaoPersonagem(usuario)
             }, 2500)            
         }
     }
 
-    const selecaoPersonagem = () => {             
-        navigate("/selecao-personagem")
+    const selecaoPersonagem = (usuario:string) => {             
+        navigate(`${usuario}/selecao-personagem`)
     }
 
     return(
