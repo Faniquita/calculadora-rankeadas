@@ -23,15 +23,15 @@ const SelecaoPersonagens = () => {
 
     return(
         <>
-            <div id='header-usuario'>{usuarioLogin}</div>
+            <div className='header-usuario'>{usuarioLogin}</div>
             <div className='header-title'>
                 <img></img>
             </div>
             <div className='section-personagens'>
-                <div className='personagem' onClick={handleSelectPersonagem('Kulljoy')}>Kulljoy</div>
-                <div className='personagem' onClick={handleSelectPersonagem('Viper')}>Viper</div>
-                <div className='personagem' onClick={handleSelectPersonagem('Skye')}>Skye </div>
-                <div className='personagem' onClick={handleSelectPersonagem('Sage')}>Sage</div>
+                <div className='personagens' onClick={handleSelectPersonagem('Kulljoy')}>Kulljoy</div>
+                <div className='personagens' onClick={handleSelectPersonagem('Viper')}>Viper</div>
+                <div className='personagens' onClick={handleSelectPersonagem('Skye')}>Skye </div>
+                <div className='personagens' onClick={handleSelectPersonagem('Sage')}>Sage</div>
             </div>           
             
             <ToastAnimated/> 
