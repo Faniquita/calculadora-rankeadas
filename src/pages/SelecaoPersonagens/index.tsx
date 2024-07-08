@@ -17,8 +17,8 @@ const SelecaoPersonagens = () => {
 
     const navigate = useNavigate()  
 
-    const handleSelectPersonagem = (personagem:string) => {
-        navigate(`${usuario}/personagem`)
+    const handleSelectPersonagem = (personagem:string) => (e: any) => {
+        navigate(`${personagem}`)
     }
 
     return(
