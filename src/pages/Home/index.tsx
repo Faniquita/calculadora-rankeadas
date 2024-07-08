@@ -46,7 +46,6 @@ const Home = () => {
                 </form>
             </div>
             <ToastAnimated/> 
-            <Footer></Footer>
         </>
     )
 }
