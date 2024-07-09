@@ -11,9 +11,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;  
-  background-image: url('../img/background.jpg');
-  background-attachment: scroll;
+  background: url('../img/background.jpg');
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-size: cover;
+  -o-background-size: cover;
 }
 
