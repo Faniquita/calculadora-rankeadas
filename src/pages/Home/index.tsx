@@ -35,6 +35,7 @@ const Home = () => {
 
     return(
         <>
+            <div id="logo-home"></div>
             <div id="usuario">
                 <form className="page-ini" onSubmit={handleSubmiteLogin}>
                     <input 

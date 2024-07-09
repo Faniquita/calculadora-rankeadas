@@ -9,5 +9,59 @@ footer{
     align-items: center;
     align-content: flex-end;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
 }
+
+#desde{
+    color: rgb(255,255,255);    
+}
+
+#tecnologias, #info {
+    color: rgb(227, 66, 81);
+}
+
+#desde, #info {
+    height: 20px;
+    margin: 8px;
+}
+
+#tecnologias{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 110px;
+    margin: 8px;
+}
+
+#info{}
+
+
+#react, #valorant, #typescript{
+    position: relative;    
+    background-position: center;
+    background-repeat: no-repeat;    
+    background-size: cover;
+    margin: 0 15px;
+}
+
+#react{
+    background-image: url("../img/react-icon.png");   
+    height: 60px;
+    width: 60px;
+}
+
+#valorant{
+    background-image: url("../img/games-valorant-icon.png");
+    height: 100px;
+    width: 100px;
+}
+
+#typescript{
+    background-image: url("../img/typescript-icon.png");
+    height: 50px;
+    width: 50px;
+}
+
+
+
+
