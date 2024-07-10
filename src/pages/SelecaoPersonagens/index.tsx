@@ -7,6 +7,7 @@ import './style/index.css';
 
 //Components
 import Footer from '../../components/Footer';
+import Header from '../../components/Header';
 
 const SelecaoPersonagens = () => {
 
@@ -22,11 +23,9 @@ const SelecaoPersonagens = () => {
     }
 
     return(
-        <>
-            <div className='header-usuario'>{usuarioLogin}</div>
-            <div className='header-title'>
-                <img></img>
-            </div>
+        <>    
+            <Header nome={usuarioLogin}></Header>
+
             <div className='section-personagens'>
                 <div className='personagens' id='Kulljoy' onClick={handleSelectPersonagem('Kulljoy')}></div>
                 <div className='personagens' id='Viper' onClick={handleSelectPersonagem('Viper')}></div>

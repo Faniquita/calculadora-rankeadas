@@ -4,6 +4,7 @@ import ToastAnimated, { showToast } from '../../form-utils/toastForms';
 
 //Style
 import './style/index.css';
+import logo from '../../img/logo.png';
 
 //Components
 import Footer from '../../components/Footer';
@@ -35,7 +36,10 @@ const Home = () => {
 
     return(
         <>
-            <div id="logo-home"></div>
+            <div id="logo-home">                
+                <img id="text-logo" src="https://fontmeme.com/permalink/240710/0587b94636250435fcc4a247f3b1bed9.png" alt="Calculadora de Rankeada Valorant"></img>
+                <img id="simbolo-logo" src={logo} alt="Logotipo"></img>
+            </div>
             <div id="usuario">
                 <form className="page-ini" onSubmit={handleSubmiteLogin}>
                     <input 

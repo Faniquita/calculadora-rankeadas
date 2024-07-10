@@ -3,13 +3,13 @@
     justify-content: center;
 }
 
-.header-title, .section-personagens{
+.section-personagens{
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-.section-personagens{
     position: relative;
+    width: 100%;
+    margin: 10px auto;
 }
 
 .personagens{

@@ -14,7 +14,10 @@ const Footer = () => {
                     <div id="typescript"></div>
                 </div>
                 <div id="info">
-                    <div></div>
+                    <div id="github-img"></div>
+                    <div id="github-text">
+                        <a href="https://github.com/Faniquita">Git<strong>Hub</strong></a>
+                    </div>                    
                 </div>
 
             </footer>
