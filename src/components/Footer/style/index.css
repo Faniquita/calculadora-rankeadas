@@ -1,8 +1,8 @@
 footer{
     background-color: rgba(27, 31, 40, 0.7);
-    position: absolute;
     bottom: 0;
     left: 0;
+    margin-top: 120px;
     width: 100%; 
     display: flex;
     align-items: center;
