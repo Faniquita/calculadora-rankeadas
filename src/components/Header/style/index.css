@@ -28,3 +28,22 @@ header{
 #simbolo-logo{
     width: 180px;
 }
+
+.header-usuario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#usuario-img{
+    width: 150px; 
+    margin-right: 17px;   
+    margin-left: 25px;
+}
+
+.header-usuario p{
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(227, 66, 82);
+}
+

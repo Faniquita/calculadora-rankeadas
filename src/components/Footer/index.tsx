@@ -14,10 +14,12 @@ const Footer = () => {
                     <div id="typescript"></div>
                 </div>
                 <div id="info">
-                    <div id="github-img"></div>
-                    <div id="github-text">
-                        <a href="https://github.com/Faniquita">Git<strong>Hub</strong></a>
-                    </div>                    
+                    <a href="https://github.com/Faniquita" target='_blank'>
+                        <div id="github-img"></div>
+                        <div id="github-text">
+                            <p>Git<strong>Hub</strong></p>
+                        </div>  
+                    </a>          
                 </div>
 
             </footer>
