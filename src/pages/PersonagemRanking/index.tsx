@@ -3,10 +3,13 @@ import { useParams } from "react-router-dom"
 
 //Componentes 
 import Footer from '../../components/Footer'
+import Header from '../../components/Header';
 
 const PersonagemRanking = () => {
 
     const {usuario, personagem} = useParams<{usuario:string, personagem:string}>()
+    const[usuarioLogin, setUsuario] = useState<string>(usuario || '')
+    const[personagemSelecionado, setPersonagem] = useState<string>(personagem || '')
 
     const[derrotas, setDerrotas] = useState<number>(0)
     const[vitorias, setVitorias] = useState<number>(0)
@@ -50,7 +53,7 @@ const PersonagemRanking = () => {
     return(
         <>
 
-            <div className="header-usuario"></div>    
+            <Header nome={usuarioLogin} personagem={personagemSelecionado}></Header>
 
 
             <div id="content-personagem">
@@ -58,14 +61,11 @@ const PersonagemRanking = () => {
                 <div className="personagem"></div>
                     
                 <div className="informacoes-personagem">
-
                     <div>
                         <p>{vitorias}/ {derrotas}</p>
                         <p>Ranking: {ranking}</p>
                         <p>{infromacaoRanking}</p>
-                    </div>
-                    
-
+                    </div>       
                     <div id="">
                         <form className="" onSubmit={handleSubmitCalcula}>
                             <input 
@@ -81,7 +81,6 @@ const PersonagemRanking = () => {
                             <button type="submit">Entrar</button>
                         </form>
                     </div>
-
                 </div>
 
             </div>

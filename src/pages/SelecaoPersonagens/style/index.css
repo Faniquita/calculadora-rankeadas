@@ -16,7 +16,7 @@
     cursor: pointer;
 }
 
-#Kulljoy{
+#Killjoy{
     background-image: url("../image/killjoy.png");    
 }
 
@@ -32,14 +32,14 @@
     background-image: url("../image/sage.png");
 }
 
-#Kulljoy, #Viper, #Skye, #Sage{
+#Killjoy, #Viper, #Skye, #Sage{
     background-position: center;
     background-repeat: no-repeat;    
     background-size: cover;
     transition: all 0.3s;
 }
 
-#Kulljoy:hover, #Viper:hover, #Skye:hover, #Sage:hover{
+#Killjoy:hover, #Viper:hover, #Skye:hover, #Sage:hover{
     transform: scale(1.2, 1.2);
     z-index: 1;
     transition: all 0.3s;

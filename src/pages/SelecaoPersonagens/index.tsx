@@ -24,10 +24,10 @@ const SelecaoPersonagens = () => {
 
     return(
         <>    
-            <Header nome={usuarioLogin}></Header>
+            <Header nome={usuarioLogin} personagem=''></Header>
 
             <div className='section-personagens'>
-                <div className='personagens' id='Kulljoy' onClick={handleSelectPersonagem('Kulljoy')}></div>
+                <div className='personagens' id='Killjoy' onClick={handleSelectPersonagem('Killjoy')}></div>
                 <div className='personagens' id='Viper' onClick={handleSelectPersonagem('Viper')}></div>
                 <div className='personagens' id='Skye' onClick={handleSelectPersonagem('Skye')}></div>
                 <div className='personagens' id='Sage' onClick={handleSelectPersonagem('Sage')}></div>

@@ -4,8 +4,8 @@ header{
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding: 14px 0;
 }
-
 
 #logo-home{
     position: absolute;
@@ -38,14 +38,27 @@ header{
 }
 
 #usuario-img{
-    width: 150px; 
-    margin-right: 17px;   
+    width: 150px;   
+    height: 150px;    
     margin-left: 25px;
+    background-color: rgb(242 247 230);
+    border-radius: 90%;
+    padding: 14px;
+    filter: drop-shadow(-6px 2px 4px rgb(227, 66, 82));
+    z-index: 1
 }
 
 .header-usuario p{
+    position: relative;
     font-size: 24px;
     font-weight: bold;
     color: rgb(227, 66, 82);
+    background-color: rgb(242 247 230);
+    padding: 10px 10px 10px 30px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    left: -10px;
+    width: 140px;
+    filter: drop-shadow(2px 2px 6px rgb(227, 66, 82))
 }
 
