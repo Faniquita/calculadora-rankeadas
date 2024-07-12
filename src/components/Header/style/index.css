@@ -22,11 +22,13 @@ header{
 }
 
 #text-logo{
-    width: 530px;
+    max-width: 530px;
+    width: 74%;
 }
 
 #simbolo-logo{
-    width: 180px;
+    max-width: 180px;
+    width: 40%;
 }
 
 .header-usuario{
