@@ -2,7 +2,33 @@
     position: relative;
     padding: 20px 80px;
     display: flex;
+    width: 60%;
+    min-width: 600px;
     align-items: center;
     flex-direction: row;
     align-content: center;    
+}
+
+#form-calculadora input{
+    background-color: rgba(0, 0, 0, 0.466);
+    color: rgb(255,255,255);
+    font-weight: bold;
+    border-radius: 30px;
+    padding: 6px 8px;
+}
+
+#form-calculadora input ::-webkit-input-placeholder {
+    color: rgb(255,255,255);
+}
+ 
+#form-calculadora input :-moz-placeholder { /* Firefox 18- */
+    color: rgb(255,255,255);  
+}
+ 
+#form-calculadora input ::-moz-placeholder {  /* Firefox 19+ */
+    color: rgb(255,255,255);  
+}
+ 
+#form-calculadora input :-ms-input-placeholder {  
+    color: rgb(255,255,255);  
 }

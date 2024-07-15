@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import { useParams } from "react-router-dom"
 
+//Style
+import './style/index.css' 
+
 //Componentes 
 import Footer from '../../components/Footer'
 import Header from '../../components/Header';
@@ -58,7 +61,9 @@ const PersonagemRanking = () => {
 
             <div id="content-personagem">
 
-                <div className="personagem"></div>
+                <div className="personagem">
+                    <img alt="Personagem selecionado"></img>
+                </div>
                     
                 <div className="informacoes-personagem">
                     <div>
@@ -66,7 +71,7 @@ const PersonagemRanking = () => {
                         <p>Ranking: {ranking}</p>
                         <p>{infromacaoRanking}</p>
                     </div>       
-                    <div id="">
+                    <div id="form-calculadora">
                         <form className="" onSubmit={handleSubmitCalcula}>
                             <input 
                                 type="number" 
