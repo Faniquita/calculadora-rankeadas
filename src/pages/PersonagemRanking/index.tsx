@@ -3,6 +3,18 @@ import { useParams } from "react-router-dom"
 
 //Style
 import './style/index.css' 
+import Killjoy from '../SelecaoPersonagens/img/killjoy.png'
+import Viper from '../SelecaoPersonagens/img/viper.png'
+import Skye from '../SelecaoPersonagens/img/skye.png'
+import Sage from '../SelecaoPersonagens/img/sage.png'
+import Ferro from '../SelecaoPersonagens/img/killjoy.png'
+import Bronze from '../SelecaoPersonagens/img/viper.png'
+import Prata from '../SelecaoPersonagens/img/skye.png'
+import Ouro from '../SelecaoPersonagens/img/sage.png'
+import Diamante from '../SelecaoPersonagens/img/killjoy.png'
+import Lendario from '../SelecaoPersonagens/img/viper.png'
+import Imortal from '../SelecaoPersonagens/img/skye.png'
+import Iniciante from '../SelecaoPersonagens/img/sage.png'
 
 //Componentes 
 import Footer from '../../components/Footer'
@@ -19,8 +31,25 @@ const PersonagemRanking = () => {
 
     const[saldoVitorias, setSaldoVitorias] = useState<number>(0)
     const[ranking, setRanking] = useState<string>('Não Rankeado')
-    const[infromacaoRanking, setInfoRanking] = useState<string>('N/A')
+    const[infromacaoRanking, setInfoRanking] = useState<string>('Sem informações da Rankeada')
 
+
+    //Imagem do personagem selecionado
+    const rankingPersonagemImagem = (personSelect:string) => {        
+        if(personSelect === "Killjoy"){
+            return Killjoy
+        }else if(personSelect === "Viper"){
+            return Viper
+        }else if(personSelect === "Skye"){
+            return Skye
+        }else{
+            return Sage
+        }        
+    }
+    const[rankingPersonagem, setRankingPersonagem] = useState<string>(rankingPersonagemImagem(personagemSelecionado) || '')    
+
+
+    //Ranking
     const returnRanking = (saldoVitoriasRankeada:number) => {
         if(saldoVitoriasRankeada >= 1 && saldoVitoriasRankeada <= 10){
             return 'Ferro' 
@@ -39,8 +68,20 @@ const PersonagemRanking = () => {
         }else if(saldoVitoriasRankeada < 0) {
             return 'Precisa treinar mais...'
         }
+    }   
+
+
+    //Imagem do Ranking
+    const rankingImgPersonagemSelecionado = (ranking:string) =>{
+
     }
 
+    const[rankingImg, setRankingImg] = useState<string>(ranking || 'Não Rankeado')
+
+
+
+    
+    //Informações finais
     const handleSubmitCalcula = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
 
@@ -48,26 +89,30 @@ const PersonagemRanking = () => {
         let ranking = returnRanking(saldoRankeada) ?? 'Não Rankeado'
 
         setRanking(ranking)
-        setInfoRanking(`O Herói tem de saldo de ${saldoRankeada} Vitorias e está no nível de ${ranking}`)
-        
-
-    }
+        setInfoRanking(`O Herói tem de saldo de ${saldoRankeada} Vitorias e está no nível de ${ranking}`)}
 
     return(
         <>
 
             <Header nome={usuarioLogin} personagem={personagemSelecionado}></Header>
 
-
             <div id="content-personagem">
 
                 <div className="personagem">
-                    <img alt="Personagem selecionado"></img>
+                    <img src={rankingPersonagem} alt="Personagem selecionado"></img>
                 </div>
                     
                 <div className="informacoes-personagem">
-                    <div>
-                        <p>{vitorias}/ {derrotas}</p>
+                    <div id="informacoes">
+                        <div className='ranking'>
+                            <p className='text-ranking'>
+                                <p id="vitorias">{vitorias}</p>
+                                <p>/</p>
+                                <p id="derrotas">{derrotas}</p>
+                            </p>                           
+                           
+                            <img src={rankingImg} alt="Ranking"></img>
+                        </div>
                         <p>Ranking: {ranking}</p>
                         <p>{infromacaoRanking}</p>
                     </div>       

@@ -17,19 +17,19 @@
 }
 
 #Killjoy{
-    background-image: url("../image/killjoy.png");    
+    background-image: url("../img/killjoy.png");    
 }
 
 #Viper{
-    background-image: url("../image/viper.png");    
+    background-image: url("../img/viper.png");    
 }
 
 #Skye{
-    background-image: url("../image/skye.png");
+    background-image: url("../img/skye.png");
 }
 
 #Sage{
-    background-image: url("../image/sage.png");
+    background-image: url("../img/sage.png");
 }
 
 #Killjoy, #Viper, #Skye, #Sage{

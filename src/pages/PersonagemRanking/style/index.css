@@ -7,28 +7,106 @@
     align-items: center;
     flex-direction: row;
     align-content: center;    
+    margin: auto;
+    font-size: 26px;
+}
+
+.informacoes-personagem{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;  
+}
+
+.text-ranking{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end; 
+}
+
+#form-calculadora form, #informacoes{
+    display: flex;
+    flex-direction: column;           
+}
+
+#form-calculadora form{
+    align-items: center;
+}
+
+#informacoes{
+    margin-bottom: 28px;    
+    width: 380px;
 }
 
 #form-calculadora input{
     background-color: rgba(0, 0, 0, 0.466);
     color: rgb(255,255,255);
     font-weight: bold;
-    border-radius: 30px;
-    padding: 6px 8px;
+    border-radius: 14px;
+    padding: 6px 10px;
+    border-style: none;
+    height: 30px;
+    width: 150px;
+    margin-bottom: 10px;
+    box-shadow: 4px 2.8px 2px rgb(240, 223, 128);
 }
 
-#form-calculadora input ::-webkit-input-placeholder {
-    color: rgb(255,255,255);
+#vitorias{
+    color: rgb(240, 223, 128);
+    margin-right: 2px;
+} 
+
+#derrotas{
+    margin-left: 4px;
+    color: rgb(185, 8, 8);
+}
+
+#form-calculadora input::-webkit-input-placeholder {
+    color: rgb(176, 252, 252);
+    text-shadow: 1px 1px 6px rgb(185, 8, 8);
 }
  
-#form-calculadora input :-moz-placeholder { /* Firefox 18- */
-    color: rgb(255,255,255);  
+#form-calculadora input:-moz-placeholder { /* Firefox 18- */
+    color: rgb(176, 252, 252);  
+    text-shadow: 1px 1px 6px rgb(185, 8, 8);
 }
  
-#form-calculadora input ::-moz-placeholder {  /* Firefox 19+ */
-    color: rgb(255,255,255);  
+#form-calculadora input::-moz-placeholder {  /* Firefox 19+ */
+    color: rgb(176, 252, 252);  
+    text-shadow: 1px 1px 6px rgb(185, 8, 8);
 }
  
-#form-calculadora input :-ms-input-placeholder {  
-    color: rgb(255,255,255);  
+#form-calculadora input:-ms-input-placeholder {  
+    color: rgb(176, 252, 252);  
+    text-shadow: 1px 1px 6px rgb(185, 8, 8);
+}
+
+#form-calculadora button{
+    color: rgb(150,139,135);
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 6px 10px;
+    border-style: none;
+    height: 30px;
+    width: 120px;
+    margin-top: 5px;
+    box-shadow: 0 0 3px rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#form-calculadora button:hover{
+    cursor: pointer;
+    background: rgba(227, 66, 82, 0.637);
+    color: rgb(255,255,255);    
+    border: none;
+    transition: all 0.3s;
+    transform: scale(1.05, 1.05);
+    box-shadow: 1px 1px 5px rgb(227, 66, 82);
+}
+
+.personagem img{
+    width: 280px;
+    height: 420px;
+    margin-right: 22px;
+    border-radius: 20px;
+    object-fit: cover;
 }
