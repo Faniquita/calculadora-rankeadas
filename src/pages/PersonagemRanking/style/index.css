@@ -8,13 +8,15 @@
     flex-direction: row;
     align-content: center;    
     margin: auto;
-    font-size: 26px;
+    font-size: 22px;
 }
 
 .informacoes-personagem{
     display: flex;
     flex-direction: column;
     align-items: flex-end;  
+    width: 50%;
+    min-width: 500px;
 }
 
 .text-ranking{
@@ -34,7 +36,10 @@
 
 #informacoes{
     margin-bottom: 28px;    
-    width: 380px;
+    width: 96%;
+    min-width: 380px;
+    height: 170px;
+    align-items: flex-start;
 }
 
 #form-calculadora input{
