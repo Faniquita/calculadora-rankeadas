@@ -113,7 +113,7 @@ const PersonagemRanking = () => {
                            
                             <img src={rankingImg} alt="Ranking"></img>
                         </div>
-                        <p>Ranking: {ranking}</p>
+                        <p>{ranking}</p>
                         <p>{infromacaoRanking}</p>
                     </div>       
                     <div id="form-calculadora">
