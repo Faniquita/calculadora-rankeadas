@@ -22,6 +22,10 @@ const SelecaoPersonagens = () => {
         navigate(`${personagem}`)
     }
 
+    const handleDeslogas = () => {
+        navigate("/")
+    }
+
     return(
         <>    
             <Header nome={usuarioLogin} personagem=''></Header>
@@ -32,6 +36,8 @@ const SelecaoPersonagens = () => {
                 <div className='personagens' id='Skye' onClick={handleSelectPersonagem('Skye')}></div>
                 <div className='personagens' id='Sage' onClick={handleSelectPersonagem('Sage')}></div>
             </div>           
+
+            <button className='deslogar' onClick={handleDeslogas}>Sair</button>
             
             <ToastAnimated/> 
             <Footer></Footer>

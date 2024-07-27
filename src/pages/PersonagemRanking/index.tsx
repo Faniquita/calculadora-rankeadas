@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useParams } from "react-router-dom"
+import { useParams, useNavigate } from "react-router-dom"
 
 //Style
 import './style/index.css' 
@@ -7,14 +7,14 @@ import Killjoy from '../SelecaoPersonagens/img/killjoy.png'
 import Viper from '../SelecaoPersonagens/img/viper.png'
 import Skye from '../SelecaoPersonagens/img/skye.png'
 import Sage from '../SelecaoPersonagens/img/sage.png'
-import Ferro from '../SelecaoPersonagens/img/killjoy.png'
-import Bronze from '../SelecaoPersonagens/img/viper.png'
-import Prata from '../SelecaoPersonagens/img/skye.png'
-import Ouro from '../SelecaoPersonagens/img/sage.png'
-import Diamante from '../SelecaoPersonagens/img/killjoy.png'
-import Lendario from '../SelecaoPersonagens/img/viper.png'
-import Imortal from '../SelecaoPersonagens/img/skye.png'
-import Iniciante from '../SelecaoPersonagens/img/sage.png'
+import Ferro from './img/ferro.png'
+import Bronze from './img/bronze.png'
+import Prata from './img/prata.png'
+import Ouro from './img/ouro.png'
+import Diamante from './img/diamante.png'
+import Lendario from './img/lendario.png'
+import Imortal from './img/imortal.png'
+import Iniciante from './img/iniciante.png'
 
 //Componentes 
 import Footer from '../../components/Footer'
@@ -73,13 +73,27 @@ const PersonagemRanking = () => {
 
     //Imagem do Ranking
     const rankingImgPersonagemSelecionado = (ranking:string) =>{
-
+        if(ranking === 'Ferro'){
+            return Ferro 
+        }else if(ranking === 'Bronze'){
+            return Bronze
+        }else if(ranking ===  'Prata'){
+            return Prata
+        }else if(ranking === 'Prata'){
+            return Ouro
+        }else if(ranking === 'Diamante'){
+            return Diamante
+        }else if(ranking === 'Lendário'){
+            return Lendario
+        }else if(ranking === 'Imortal'){
+            return Imortal
+        }else{
+            return Iniciante
+        }
     }
 
-    const[rankingImg, setRankingImg] = useState<string>(ranking || 'Não Rankeado')
-
-
-
+    const[rankingImg, setRankingImg] = useState<string>(rankingImgPersonagemSelecionado(ranking))
+    
     
     //Informações finais
     const handleSubmitCalcula = (e:React.FormEvent<HTMLFormElement>) => {
@@ -89,7 +103,16 @@ const PersonagemRanking = () => {
         let ranking = returnRanking(saldoRankeada) ?? 'Não Rankeado'
 
         setRanking(ranking)
-        setInfoRanking(`O Herói tem de saldo de ${saldoRankeada} Vitorias e está no nível de ${ranking}`)}
+        setRankingImg(rankingImgPersonagemSelecionado(ranking))
+        setInfoRanking(`O Herói tem saldo de ${saldoRankeada} Vitorias e está no nível de ${ranking}`)
+    }
+
+    //Retornar a seleção de personagens
+    const navigate = useNavigate()  
+    const handleReturnSelectPersonagem = () =>{
+        navigate(`/${usuario}/selecao-personagem`)
+    }
+
 
     return(
         <>
@@ -104,17 +127,15 @@ const PersonagemRanking = () => {
                     
                 <div className="informacoes-personagem">
                     <div id="informacoes">
-                        <div className='ranking'>
+                        <div className='ranking'>                            
                             <p className='text-ranking'>
                                 <p id="vitorias">{vitorias}</p>
                                 <p>/</p>
                                 <p id="derrotas">{derrotas}</p>
-                            </p>                           
-                           
-                            <img src={rankingImg} alt="Ranking"></img>
+                            </p>        
+                            <img src={rankingImg} alt="Ranking"></img>                        
                         </div>
-                        <p>{ranking}</p>
-                        <p>{infromacaoRanking}</p>
+                        <p className='info-text'>{infromacaoRanking}</p>
                     </div>       
                     <div id="form-calculadora">
                         <form className="" onSubmit={handleSubmitCalcula}>
@@ -133,8 +154,10 @@ const PersonagemRanking = () => {
                     </div>
                 </div>
 
+                
             </div>
           
+            <button className='select-person' onClick={handleReturnSelectPersonagem}>Selecionar Personagem</button>
 
             <Footer></Footer>
 

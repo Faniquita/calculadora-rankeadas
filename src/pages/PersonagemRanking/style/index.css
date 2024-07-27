@@ -9,6 +9,10 @@
     align-content: center;    
     margin: auto;
     font-size: 22px;
+    background-color: rgba(0, 0, 0, 0.466);
+    border-top-right-radius: 110px;
+    border-bottom-left-radius: 110px;
+    color: rgb(255, 255, 255);
 }
 
 .informacoes-personagem{
@@ -16,7 +20,7 @@
     flex-direction: column;
     align-items: flex-end;  
     width: 50%;
-    min-width: 500px;
+    min-width: 300px;
 }
 
 .text-ranking{
@@ -37,9 +41,9 @@
 #informacoes{
     margin-bottom: 28px;    
     width: 96%;
-    min-width: 380px;
+    min-width: 300px;
     height: 170px;
-    align-items: flex-start;
+    align-items: end;
 }
 
 #form-calculadora input{
@@ -114,4 +118,37 @@
     margin-right: 22px;
     border-radius: 20px;
     object-fit: cover;
+}
+
+.ranking{
+    display: flex;    
+    flex-direction: row;
+}
+.ranking img{
+    margin-left: 10px;
+}
+
+.info-text{
+    margin-top: 20px;
+}
+
+.select-person{
+    display: flex;
+    margin: 40px auto 10px;
+    padding: 10px 24px;
+    border-radius: 8px;
+    border-color: rgb(185, 8, 8);
+    color: rgb(227, 66, 82);
+    background-color: rgba(0, 0, 0, 0.466);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.select-person:hover{
+    color: rgb(185, 8, 8);
+    border-color: rgb(240, 223, 128);
+    box-shadow: 1px 1px 5px rgb(227, 66, 82);
+    transition: all 0.3s;
+    transform: scale(1.05, 1.05);
+    font-weight: bold;
 }
